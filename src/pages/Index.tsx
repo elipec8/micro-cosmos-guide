@@ -3,10 +3,10 @@ import { MicroCard } from "@/components/MicroCard";
 import { DetailSection } from "@/components/DetailSection";
 import { InfoCard } from "@/components/InfoCard";
 import heroImage from "@/assets/hero-microbiologia.jpg";
-import bacteriaImage from "@/assets/bacteria.jpg";
-import virusImage from "@/assets/virus.jpg";
-import fungiImage from "@/assets/fungi.jpg";
-import protozoaImage from "@/assets/protozoa.jpg";
+import bacteriaStructure from "@/assets/bacteria-structure.jpg";
+import virusStructure from "@/assets/virus-structure.jpg";
+import fungiStructure from "@/assets/fungi-structure.jpg";
+import protozoaStructure from "@/assets/protozoa-structure.jpg";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -83,14 +83,18 @@ const Index = () => {
 
       {/* Bacteria Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl mb-12">
-          <img src={bacteriaImage} alt="Ilustração científica de diversos tipos de bactérias" className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-[var(--shadow-soft)]" />
-        </div>
-        <DetailSection
-          title="Bactérias"
-          subtitle="Procariontes Fundamentais"
-          gradient="from-primary to-primary-glow"
-        >
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-primary to-primary-glow text-white font-semibold mb-4 shadow-lg">
+              Procariontes Fundamentais
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Bactérias</h2>
+            <div className="max-w-md mx-auto mb-8">
+              <img src={bacteriaStructure} alt="Diagrama estrutural da célula bacteriana mostrando organelas e componentes" className="w-full rounded-2xl shadow-[var(--shadow-soft)] border-4 border-primary/20" />
+              <p className="text-sm text-muted-foreground mt-3 italic">Estrutura celular bacteriana detalhada</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
           <InfoCard
             title="Estrutura Celular"
             content="As bactérias são organismos unicelulares procariontes, ou seja, não possuem núcleo definido. Seu material genético (DNA) está disperso no citoplasma em uma região chamada nucleoide. Possuem parede celular rígida feita de peptidoglicano, que protege a célula e mantém sua forma característica."
@@ -115,19 +119,24 @@ const Index = () => {
             title="Bactérias Benéficas"
             content="A microbiota intestinal humana contém trilhões de bactérias benéficas que auxiliam na digestão, síntese de vitaminas K e B12, e proteção contra patógenos. Probióticos são suplementos com bactérias vivas que promovem saúde intestinal. Bactérias do gênero Rhizobium fixam nitrogênio atmosférico em raízes de leguminosas."
           />
-        </DetailSection>
+          </div>
+        </div>
       </section>
 
       {/* Virus Section */}
       <section className="py-16 px-4 bg-background/60 backdrop-blur-sm">
-        <div className="container mx-auto max-w-6xl mb-12">
-          <img src={virusImage} alt="Ilustração científica de partículas virais com estrutura de capsídeo" className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-[var(--shadow-soft)]" />
-        </div>
-        <DetailSection
-          title="Vírus"
-          subtitle="Agentes Infecciosos Acelulares"
-          gradient="from-accent to-blue-500"
-        >
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-accent to-blue-500 text-white font-semibold mb-4 shadow-lg">
+              Agentes Infecciosos Acelulares
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Vírus</h2>
+            <div className="max-w-md mx-auto mb-8">
+              <img src={virusStructure} alt="Diagrama estrutural do vírus mostrando capsídeo, envelope e material genético" className="w-full rounded-2xl shadow-[var(--shadow-soft)] border-4 border-accent/20" />
+              <p className="text-sm text-muted-foreground mt-3 italic">Estrutura viral com suas camadas e componentes</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
           <InfoCard
             title="Estrutura Viral"
             content="Vírus não são considerados seres vivos por não possuírem estrutura celular. São compostos por material genético (DNA ou RNA) envolto por uma cápsula proteica chamada capsídeo. Alguns possuem envelope lipídico adicional derivado da membrana da célula hospedeira."
@@ -152,19 +161,24 @@ const Index = () => {
             title="Vacinas e Imunização"
             content="Vacinas contêm antígenos virais (vírus atenuados, inativados ou proteínas virais) que estimulam resposta imunológica sem causar doença. A memória imunológica gerada protege contra infecções futuras. Vacinas erradicaram a varíola e reduziram drasticamente doenças como poliomielite, sarampo e rubéola."
           />
-        </DetailSection>
+          </div>
+        </div>
       </section>
 
       {/* Fungi Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl mb-12">
-          <img src={fungiImage} alt="Ilustração científica de diversos tipos de fungos e estruturas fúngicas" className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-[var(--shadow-soft)]" />
-        </div>
-        <DetailSection
-          title="Fungos"
-          subtitle="Reino dos Decompositores"
-          gradient="from-secondary to-green-500"
-        >
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-secondary to-green-500 text-white font-semibold mb-4 shadow-lg">
+              Reino dos Decompositores
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Fungos</h2>
+            <div className="max-w-md mx-auto mb-8">
+              <img src={fungiStructure} alt="Diagrama estrutural da célula fúngica mostrando parede celular e organelas" className="w-full rounded-2xl shadow-[var(--shadow-soft)] border-4 border-secondary/20" />
+              <p className="text-sm text-muted-foreground mt-3 italic">Estrutura celular dos fungos com parede de quitina</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
           <InfoCard
             title="Características Gerais"
             content="Organismos eucarióticos com parede celular de quitina. Podem ser unicelulares (leveduras) ou multicelulares (bolores e cogumelos). São heterotróficos, obtendo nutrientes por absorção após secreção de enzimas digestivas no ambiente."
@@ -189,19 +203,24 @@ const Index = () => {
             title="Micoses e Patologias"
             content="Causam infecções superficiais (pé de atleta, candidíase) e sistêmicas (histoplasmose, aspergilose). Micotoxinas produzidas por fungos contaminantes de alimentos podem causar intoxicações graves. Tratamento com antifúngicos como azóis e equinocandinas que inibem síntese da parede celular ou membrana plasmática fúngica."
           />
-        </DetailSection>
+          </div>
+        </div>
       </section>
 
       {/* Protozoa Section */}
       <section className="py-16 px-4 bg-background/60 backdrop-blur-sm">
-        <div className="container mx-auto max-w-6xl mb-12">
-          <img src={protozoaImage} alt="Ilustração científica de diversos tipos de protozoários unicelulares" className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-[var(--shadow-soft)]" />
-        </div>
-        <DetailSection
-          title="Protozoários"
-          subtitle="Eucariontes Unicelulares"
-          gradient="from-primary to-accent"
-        >
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-2 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold mb-4 shadow-lg">
+              Eucariontes Unicelulares
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Protozoários</h2>
+            <div className="max-w-md mx-auto mb-8">
+              <img src={protozoaStructure} alt="Diagrama estrutural dos protozoários mostrando estruturas de locomoção" className="w-full rounded-2xl shadow-[var(--shadow-soft)] border-4 border-primary/20" />
+              <p className="text-sm text-muted-foreground mt-3 italic">Estrutura dos protozoários com diferentes sistemas de locomoção</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
           <InfoCard
             title="Características Celulares"
             content="Organismos eucarióticos unicelulares com grande diversidade morfológica e fisiológica. Possuem núcleo definido, organelas membranosas e podem apresentar estruturas especializadas como vacúolos contráteis, cílios, flagelos e pseudópodes para locomoção."
@@ -226,7 +245,8 @@ const Index = () => {
             title="Paramécio e Organismos Modelo"
             content="O Paramecium é um ciliado amplamente estudado como organismo modelo. Possui dois núcleos (macronúcleo e micronúcleo) e reproduz-se por fissão binária ou conjugação. Sua complexidade celular ilustra organização avançada em unicelulares, com organelas especializadas como tricocistos para defesa e vacúolos digestivos."
           />
-        </DetailSection>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
